@@ -1,0 +1,50 @@
+Generating report for minidump
+
+Application version 5.3.2.0
+ ... built from changelist 29314046
+
+OS version Linux 6.5.0-14-generic (network name: lilyan)
+Running 14 x86_64 processors (20 logical cores)
+Exception was "Ensure condition failed: Registrations.Num() == 0  [File:../Plugins/Experimental/LocalizableMessage/Source/LocalizableMessage/Public/LocalizableMessageProcessor.h] [Line: 24] "
+
+<SOURCE START>
+<SOURCE END>
+
+<CALLSTACK START>
+libUnrealEditor-LocalizableMessage.so!FLocalizableMessageProcessor::FScopedRegistrations::~FScopedRegistrations() [/mnt/horde/++UE5/Sync/Engine/Source/../Plugins/Experimental/LocalizableMessage/Source/LocalizableMessage/Public/LocalizableMessageProcessor.h:24]
+libc.so.6!UnknownFunction(0x45494)
+libc.so.6!exit(+0x1f)
+libX11.so.6!_XDefaultError(+0x3a)
+libX11.so.6!_XError(+0x123)
+libX11.so.6!UnknownFunction(0x44af6)
+libX11.so.6!UnknownFunction(0x44b94)
+libX11.so.6!_XEventsQueued(+0x79)
+libX11.so.6!XFlush(+0x1d)
+libUnrealEditor-ApplicationCore.so!X11_DestroyPointerBarrier [/SDL-gui-backend/src/video/x11/SDL_x11xfixes.c:199]
+libUnrealEditor-ApplicationCore.so!X11_ConfineCursorWithFlags [/SDL-gui-backend/src/video/x11/SDL_x11xfixes.c:111]
+libUnrealEditor-ApplicationCore.so!SDL_SetWindowMouseRect_REAL [/SDL-gui-backend/src/video/SDL_video.c:3052]
+libUnrealEditor-ApplicationCore.so!FLinuxCursor::Lock(tagRECT const*) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/ApplicationCore/Private/Linux/LinuxCursor.cpp:357]
+libUnrealEditor-Slate.so!FSlateUser::LockCursorInternal(FWidgetPath const&) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Slate/Private/Framework/Application/SlateUser.cpp:988]
+libUnrealEditor-Slate.so!FSlateUser::LockCursor(TSharedRef<SWidget, (ESPMode)1> const&) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Slate/Private/Framework/Application/SlateUser.cpp:856]
+libUnrealEditor-Slate.so!FSlateApplication::ProcessReply(FWidgetPath const&, FReply const&, FWidgetPath const*, FPointerEvent const*, unsigned int) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Slate/Private/Framework/Application/SlateApplication.cpp:3432]
+libUnrealEditor-Slate.so!FSlateApplication::SetUserFocus(FSlateUser&, FWidgetPath const&, EFocusCause) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Slate/Private/Framework/Application/SlateApplication.cpp:2986]
+libUnrealEditor-Slate.so!FSlateApplication::SetUserFocus(unsigned int, TSharedPtr<SWidget, (ESPMode)1> const&, EFocusCause) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Slate/Private/Framework/Application/SlateApplication.cpp:2590]
+libUnrealEditor-Slate.so!FSlateUser::SetFocus(TSharedRef<SWidget, (ESPMode)1> const&, EFocusCause) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Slate/Private/Framework/Application/SlateUser.cpp:175]
+libUnrealEditor-Slate.so!FSlateApplication::ProcessReply(FWidgetPath const&, FReply const&, FWidgetPath const*, FPointerEvent const*, unsigned int) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Slate/Private/Framework/Application/SlateApplication.cpp:3536]
+libUnrealEditor-Slate.so!FSlateApplication::RoutePointerDownEvent(FWidgetPath const&, FPointerEvent const&) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Slate/Private/Framework/Application/SlateApplication.cpp:5090]
+libUnrealEditor-Slate.so!FSlateApplication::ProcessMouseButtonDownEvent(TSharedPtr<FGenericWindow, (ESPMode)1> const&, FPointerEvent const&) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Slate/Private/Framework/Application/SlateApplication.cpp:5038]
+libUnrealEditor-Slate.so!FSlateApplication::OnMouseDown(TSharedPtr<FGenericWindow, (ESPMode)1> const&, EMouseButtons::Type, UE::Math::TVector2<double>) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Slate/Private/Framework/Application/SlateApplication.cpp:4936]
+libUnrealEditor-ApplicationCore.so!FLinuxApplication::ProcessDeferredMessage(SDL_Event) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/ApplicationCore/Private/Linux/LinuxApplication.cpp:454]
+libUnrealEditor-ApplicationCore.so!FLinuxPlatformApplicationMisc::PumpMessages(bool) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/ApplicationCore/Private/Linux/LinuxPlatformApplicationMisc.cpp:442]
+UnrealEditor!FEngineLoop::Tick() [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Launch/Private/LaunchEngineLoop.cpp:5743]
+UnrealEditor!GuardedMain(char16_t const*) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Launch/Private/Launch.cpp:190]
+libUnrealEditor-UnixCommonStartup.so!CommonUnixMain(int, char**, int (*)(char16_t const*), void (*)()) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Unix/UnixCommonStartup/Private/UnixCommonStartup.cpp:269]
+libc.so.6!UnknownFunction(0x29d8f)
+libc.so.6!__libc_start_main(+0x7f)
+UnrealEditor!_start()
+
+<CALLSTACK END>
+
+0 loaded modules
+
+Report end!
