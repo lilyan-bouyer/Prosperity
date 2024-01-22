@@ -1,0 +1,12 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"/home/lilyan/Documents/Unreal Projects/prosperity_try1/Content/StarterContent/Maps/Minimal_Default_BuiltData.uasset"
+			]
+		}
+	]
+}
